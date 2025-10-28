@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}BossDiamond AI{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+     <style>
+        body {
+            background-image: url('/static/logo.png'); /* your logo */
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: 150px auto; /* adjust size as needed */
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/chat">Chat</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BossDiamond AI | All rights reserved</p>
+    </footer>
+</body>
+</html>

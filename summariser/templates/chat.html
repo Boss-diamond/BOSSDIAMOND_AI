@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col h-screen max-w-2xl mx-auto px-4 py-6">
+
+    <!-- Header -->
+    <h1 class="text-2xl font-bold mb-3 text-center">Chat with BossDiamond AI</h1>
+
+    <!-- Chat window -->
+    <div id="chat-window"
+         class="flex-1 border rounded p-4 overflow-y-auto bg-gray-50 flex flex-col gap-2 mb-24">
+        <!-- Messages appear here -->
+    </div>
+
+    <!-- Input area fixed at bottom -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-md py-3 px-4 flex justify-center">
+        <div class="flex items-center gap-2 w-full max-w-2xl">
+            
+            <!-- File upload with attachment icon -->
+            <label for="file-upload"
+                   class="cursor-pointer bg-gray-200 hover:bg-gray-300 rounded p-2 text-xl font-bold">📎</label>
+            <input id="file-upload" type="file" class="hidden">
+
+            <!-- Message input -->
+            <input type="text" id="message-input" placeholder="Type a message..."
+                   class="flex-1 border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <!-- Send button -->
+            <button id="send-button"
+                    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Send
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+{% endblock %}
