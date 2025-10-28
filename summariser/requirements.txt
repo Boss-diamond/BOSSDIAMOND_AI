@@ -5,4 +5,4 @@ python-multipart
 PyPDF2
 python-docx
 python-dotenv
-google-generativeai
+google-genai
